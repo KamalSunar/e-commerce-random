@@ -1,0 +1,49 @@
+.nav {
+  background-color: $grey;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 2.6px;
+
+  &bar {
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo,
+    .store {
+      cursor: pointer;
+    }
+
+    h3 {
+      font-weight: 500;
+      font-size: 20px;
+    }
+
+    .store {
+      cursor: pointer;
+      position: relative;
+
+      svg {
+        width: 30px;
+      }
+    }
+
+    .count {
+      position: absolute;
+      bottom: 1px;
+      right: -3px;
+      cursor: initial;
+
+      background-color: $primary;
+      border-radius: 50%;
+      color: $white;
+      font-size: 10px;
+      font-weight: 600;
+      width: 15px;
+      height: 15px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

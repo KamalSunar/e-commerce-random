@@ -1,24 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from "react";
+import "./app.scss";
+import Home from "./pages/home";
+import { RoutingContext, pagesMapping } from "./routes/routes";
+import Navbar from "./components/navbar";
+import Details from "./pages/details";
 
 function App() {
+  const { page } = useContext(RoutingContext);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      {(pagesMapping.home === page) && <Home />}
+      {(pagesMapping.details === page) && <Details />}
     </div>
   );
 }

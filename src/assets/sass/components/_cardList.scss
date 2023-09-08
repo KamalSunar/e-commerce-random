@@ -1,0 +1,113 @@
+.cardList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $grey;
+  gap: 10px;
+  margin-bottom: 2px;
+
+  &-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .img-box {
+      background-color: rgb(231, 231, 231);
+
+      img {
+        width: 60px;
+
+        @media (min-width: 512px) {
+          width: 110px;
+        }
+      }
+    }
+
+    .remove {
+      background-color: $red;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px;
+      cursor: pointer;
+
+      svg {
+        width: 20px;
+      }
+    }
+  }
+
+  &-details {
+    .qty {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      gap: 10px;
+
+      &-total {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        .increment {
+          padding: 5px;
+          border: 1px solid $grey;
+          width: 30px;
+          height: 30px;
+          background-color: $white;
+
+          cursor: pointer;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &:hover {
+            background-color: $grey;
+          }
+
+          &:disabled {
+            background-color: $grey;
+          }
+
+          &:focus {
+            outline: 1px solid $lightGray;
+          }
+        }
+
+        .total {
+          width: 30px;
+          height: 30px;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    h6 {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 10px;
+
+      @media (min-width: 512px) {
+        font-size: 20px;
+      }
+    }
+
+    p,
+    .price {
+      font-size: 15px;
+    }
+
+    .price {
+      padding-bottom: 10px;
+    }
+  }
+
+  &-right h5 {
+    text-align: right;
+    font-size: 16px;
+  }
+}
